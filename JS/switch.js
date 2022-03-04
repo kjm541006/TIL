@@ -11,6 +11,9 @@ switch (day_number) {
   case 2:
     day = "Tuesday"; // output
     break;
+  default:
+    day = "error";
+    break;
 }
 
 console.log(day);
