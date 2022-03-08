@@ -88,7 +88,7 @@ console.log("-------------------------------------------");
 }
 
 // 문자열 분할
-// split(Separator,limit) --> 배열로 문자열을 분할함
+// split(Separator,limit) --> 문자열을 배열로 분할
 {
   let fruits = "apple, banana, melon";
   result = fruits.split(" ");
