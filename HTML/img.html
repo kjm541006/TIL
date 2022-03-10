@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Image</h2>
+
+    <!-- 절대 경로 -->
+    <img
+      src="https://wwfkr.awsassets.panda.org/img/original/polarbear-cc.jpg"
+      alt="북극곰 가족(alt에는 img의 설명을 작성, 에러 발생시 alt 값 출력)"
+      title="북극곰 가족(이미지에 마우스 hover시 값 보여줌)"
+      width="150px"
+      height="100px"
+    />
+    <br />
+
+    <!-- viewport에 따른 이미지 지정 -->
+    <img
+      src="img/big.png"
+      srcset="img/small.png 300w, img/medium.png 450w, img/big.png 600w"
+      sizes="(min-width: 600px) 600px, (min-width: 450px) 450px, 300px"
+      alt="responsive images"
+    />
+  </body>
+</html>
