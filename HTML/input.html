@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Form</h2>
+
+    <form action="" method="get">
+      <div>
+        <label for="username">
+          USERNAME:
+          <input
+            type="username"
+            name="username"
+            id="username"
+            placeholder="아이디 입력(자동완성 ❌)"
+            autocomplete="off"
+            required
+          />
+        </label>
+      </div>
+      <div>
+        <label for="password">
+          PASSWORD:
+          <input type="password" name="password" id="password" required />
+        </label>
+      </div>
+      <div>
+        <label for="number">
+          NUMBER :
+          <input type="number" name="number" id="number" />
+        </label>
+      </div>
+      <div>
+        <label for="range">
+          RANGE:
+          <input type="range" name="range" id="range" />
+        </label>
+      </div>
+      <div>
+        <label for="date">
+          DATE:
+          <input type="DATE" name="date" id="date" />
+        </label>
+      </div>
+      <div>
+        <label for="month">
+          MONTH:
+          <input type="month" name="month" id="month" />
+        </label>
+      </div>
+      <div>
+        <label for="time">
+          TIME:
+          <input type="time" name="time" id="time" />
+        </label>
+      </div>
+      <div>
+        <label for="tomato">
+          토마토를 좋아하시나요?
+          <input type="checkbox" name="tomato" id="tomato" />
+        </label>
+        <label for="adult">
+          19세 이상인가요?
+          <input type="checkbox" name="adult" id="adult" checked />
+        </label>
+      </div>
+      <div>
+        <label>
+          남자:
+          <input type="radio" name="gender" value="man" />
+        </label>
+        <br />
+        <label>
+          여자:
+          <input type="radio" name="gender" value="woman" />
+        </label>
+      </div>
+      <input type="reset" />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>
