@@ -130,3 +130,33 @@ console.log("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ�
   console.log(str);
   console.log(str === fruits); // false
 }
+
+// N차원 배열
+{
+  let array = [
+    [101, 102, 103],
+    [201, 202, 203],
+    [301, 302, 303],
+  ];
+
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      console.log(array[i][j]);
+    }
+  }
+
+  console.log(array);
+  console.log(array.length); // 3
+  console.log(array[0][2]); // 103
+
+  const arr1 = array.pop();
+
+  console.log(array); // [101,102,103],[201,202,203]
+  console.log(arr1); // [301,302,303]
+  console.log(arr1.length); // 3
+
+  let arr2 = array.push([401, 402, 403]);
+
+  console.log(arr2);
+  console.log(array);
+}
