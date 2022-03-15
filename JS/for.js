@@ -31,6 +31,7 @@ console.log("-------------------------------------------");
 console.log("-------------------------------------------");
 
 // for .. of ( for(variable of iterable) )
+// (String, Array, TypedArray, Map, Set)
 {
   let language = "Javascript";
   let text = "";
@@ -40,4 +41,11 @@ console.log("-------------------------------------------");
     text += x;
   }
   console.log(text);
+}
+
+{
+  const arr = [1, 2, 3, 4, 5];
+  for (let i of arr) {
+    console.log(i);
+  }
 }
