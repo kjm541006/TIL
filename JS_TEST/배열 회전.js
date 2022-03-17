@@ -4,17 +4,22 @@
 function answer(user) {
   let reverse = [];
 
-  // for (let i = user.length - 1; i >= 0; i--) {
-  //   reverse.push(user[i]);
-  // }
-  let temp;
-  for (let i = 0; i < user.length / 2; i++) {
-    temp = user[i];
-    user[i] = user[user.length - 1 - i];
-    user[user.length - 1 - i] = temp;
+  for (let i = user.length - 1; i >= 0; i--) {
+    reverse.push(user[i]);
   }
 
-  reverse = user;
+  // ****************************
+
+  // let temp;
+  // for (let i = 0; i < user.length / 2; i++) {
+  //   temp = user[i];
+  //   user[i] = user[user.length - 1 - i];
+  //   user[user.length - 1 - i] = temp;
+  // }
+  // reverse = user;
+
+  // *****************************
+
   // reverse = user.reverse();
 
   return reverse;
