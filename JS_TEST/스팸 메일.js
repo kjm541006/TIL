@@ -5,10 +5,6 @@ function answer(str) {
   let spam_flag;
   const spamLetter = "advert";
 
-  // if (str.toLowerCase().includes(spamLetter)) {
-  //   spam_flag = true;
-  // } else spam_flag = false;
-
   spam_flag = str.toLowerCase().includes(spamLetter);
 
   return spam_flag;
