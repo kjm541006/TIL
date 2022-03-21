@@ -143,4 +143,4 @@ p {
 */
 
 /* 명시도
-  inline style > ID > Class/Attribute/Pseudo Class > Type (tag) > * >inherited */
+  !important > inline style > ID > Class/Attribute/Pseudo Class > Type (tag) > * >inherited */
