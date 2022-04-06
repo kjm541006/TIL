@@ -17,6 +17,11 @@ function answer(a, b, c) {
   }
   d *= 0.5;
 
+  // for(let i = 1; i < num.length; i++){
+  //   d+= num[i] - num[i-1];
+  // }
+  // d /= num.length;
+
   // 2. 값 구하기
   for (let i = 0; i < num.length - 1; i++) {
     if (num[i + 1] != num[i] + d) {
