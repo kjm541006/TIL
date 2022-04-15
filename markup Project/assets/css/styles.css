@@ -377,11 +377,11 @@ textarea::-webkit-outer-spin-button {
   background-color: #e7f7ff;
 }
 
-.info-main-title {
+.order-info-area .info-main-title {
   line-height: 39px;
 }
 
-.title {
+.order-info-area .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +394,7 @@ textarea::-webkit-outer-spin-button {
   color: #333;
 }
 
-.title .ico-n-logo {
+.order-info-area .ico-n-logo {
   margin-right: 6px;
   width: 24px;
   height: 24px;
@@ -434,6 +434,55 @@ textarea::-webkit-outer-spin-button {
   color: #333;
   -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tab-switch-box .tab-switch.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg) translateX(-50%);
+          transform: rotate(45deg) translateX(-50%);
+}
+
+.tab-switch-box .tab-switch.is-active .ico-check {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.tab-switch-box .ico-check {
+  display: none;
+}
+
+.info-main-notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 2px;
+  background-color: #fff;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: #333;
+}
+
+.info-main-notice.alert {
+  color: #ff3d3b;
+  font-weight: 700;
+}
+
+.info-main-notice .ico-clock {
+  margin-right: 6px;
 }
 
 .container {
