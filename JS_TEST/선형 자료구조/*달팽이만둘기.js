@@ -13,10 +13,12 @@ function answer(length) {
   let x, y, num;
   x = y = num = 0;
   x--;
+  let direction = 1;
 
   while (1) {
     for (let i = 0; i < length; i++) {
-      x += 1;
+      // x += 1;
+      x += direction;
       result[y][x] = ++num;
     }
 
@@ -24,22 +26,25 @@ function answer(length) {
     if (length == 0) break;
 
     for (let j = 0; j < length; j++) {
-      y += 1;
+      // y += 1;
+      y += direction;
       result[y][x] = ++num;
     }
 
-    for (let i = 0; i < length; i++) {
-      x -= 1;
-      result[y][x] = ++num;
-    }
+    direction *= -1;
 
-    length--;
-    if (length == 0) break;
+    // for (let i = 0; i < length; i++) {
+    //   x -= 1;
+    //   result[y][x] = ++num;
+    // }
 
-    for (let j = 0; j < length; j++) {
-      y -= 1;
-      result[y][x] = ++num;
-    }
+    // length--;
+    // if (length == 0) break;
+
+    // for (let j = 0; j < length; j++) {
+    //   y -= 1;
+    //   result[y][x] = ++num;
+    // }
   }
 
   return result;
