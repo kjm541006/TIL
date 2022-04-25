@@ -39,6 +39,25 @@
     return $todoItem
   }
 
-  const init = () => {}
+  const renderAllTodos = (todos) => {
+    $todos.innerHTML = ''
+    todos.forEach((item) => {
+      const todoElement = createTodoElement(item)
+      $todos.appendChild(todoElement)
+    })
+  }
+
+  const getTodos = () => {
+    fetch('http://localhost:3000/todos')
+      .then((response) => response.json())
+      .then((todos) => console.log(todos))
+      .catch((error) => console.error(error))
+  }
+
+  const init = () => {
+    window.addEventListener('DOMContentLoaded', (event) => {
+      getTodos()
+    })
+  }
   init()
 })()
