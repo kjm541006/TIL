@@ -1,14 +1,9 @@
 {
   "todos": [
     {
-      "content": "테스트 6",
+      "content": "테스트 1",
       "completed": false,
-      "id": 6
-    },
-    {
-      "content": "테스트 7",
-      "completed": false,
-      "id": 7
+      "id": 1
     }
   ]
 }
