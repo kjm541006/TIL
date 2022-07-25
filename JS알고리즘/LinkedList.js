@@ -4,7 +4,7 @@ function Node(data) {
   this.next = null;
 }
 
-// LinkedList()
+// LinkedList() : head와 length를 가지고 있는 객체
 function LinkedList() {
   this.head = null;
   this.length = 0;
@@ -90,8 +90,66 @@ LinkedList.prototype.remove = function (value) {
 };
 
 let ll = new LinkedList();
+// ll.head = new Node(123);
+// ll.length++;
+console.log(ll);
 ll.insert(1);
 ll.insert(2);
 ll.insert(3);
+console.log(ll);
 
 ll.printNode();
+
+function Node(data) {
+  this.data = data;
+  this.next = null;
+}
+
+function LinkedList() {
+  this.head = null;
+  this.length = 0;
+}
+
+LinkedList.prototype.append = function (value) {
+  let node = new Node(value),
+    current = this.head;
+  if (this.head === null) {
+    this.head = node;
+  } else {
+    while (current.next != null) {
+      this.node;
+    }
+  }
+};
+
+function Person(name) {
+  this.name = name || "혁준";
+}
+
+Person.prototype.getName = function () {
+  return this.name;
+};
+
+function Korean(name) {}
+
+Korean.prototype = new Person();
+let kor1 = new Korean();
+console.log(kor1.getName());
+
+let kor2 = new Korean("지수");
+console.log(kor2.getName());
+console.log(kor2.getName());
+
+function Person(name) {
+  this.name = name || "name";
+}
+
+Person.prototype.getName = function () {
+  return this.name;
+};
+
+function Korean(name) {}
+
+Korean.prototype = new Person();
+let kor3 = new Korean();
+console.log(kor3.getName());
