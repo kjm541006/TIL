@@ -16,8 +16,8 @@ const Header = (props) => {
       <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
         {name === "jumin" ? `Hello jumin Welcome Back!!` : `Hello ${name}! Learn React!`}
       </a>
-      <input type="checkbox" name="agreement" id="chkbox"></input>
-      <label htmlFor="chkbox">동의</label>
+      <input type="checkbox" name="agreement" id={"chkNum" + props.boxNum}></input>
+      <label htmlFor={"chkNum" + props.boxNum}>동의</label>
     </header>
   );
 };
