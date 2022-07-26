@@ -1,37 +1,45 @@
 import React, { useState } from "react";
 
 export default function Counter() {
-  // 값 state -> count, 값을 변경할 떄 쓰는 함수 setState -> setCount, 초기값
-  // const [set, setState] = useState(초기값);
-  const [count, setCount] = useState(0);
-  const [show, setShow] = useState(true);
-
   const operators = ["+", "-", "*"];
-  const [operator, setOperator] = useState(operators[0]);
+
+  const [info, setInfo] = useState({
+    count: 0,
+    show: true,
+    operator: operators[0],
+  });
+
+  console.log(info);
   return (
     <div>
       <button
         onClick={() => {
           let result;
-          if (operator === "+") result = count + 1;
-          if (operator === "*") result = count * 1;
-          if (operator === "-") result = count - 1;
-          setCount(result);
+          if (info.operator === "+") result = info.count + 1;
+          if (info.operator === "*") result = info.count * 1;
+          if (info.operator === "-") result = info.count - 1;
+          setInfo({ ...info, count: result });
         }}
       >
-        {operator}1
+        {info.operator}1
       </button>
-      <button onClick={() => setShow(!show)}>Show and Hide</button>
+      <button
+        onClick={() => {
+          setInfo({ ...info, show: !info.show });
+        }}
+      >
+        Show and Hide
+      </button>
       <button
         onClick={() => {
           const idx = Math.floor(Math.random() * operators.length);
-          setOperator(operators[idx]);
+          setInfo({ ...info, operator: operators[idx] });
         }}
       >
         Change Operator
       </button>
       <br />
-      {show && `Counter : ${count}`}
+      {info.show && `Counter : ${info.count}`}
     </div>
   );
 }
