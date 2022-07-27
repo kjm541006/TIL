@@ -1,8 +1,8 @@
-import Clock from "./components/ClassClock";
+import ClassClock from "./components/ClassClock";
 function App() {
   return (
     <div>
-      <Clock />
+      <ClassClock />
     </div>
   );
 }
