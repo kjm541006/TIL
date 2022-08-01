@@ -10,6 +10,7 @@ export default function BusinessCard(props) {
       <div>이름 : {name}</div>
       <div>전화번호 : {phoneNumber}</div>
       <div>이메일 : {email}</div>
+      <br />
     </div>
   );
 }
