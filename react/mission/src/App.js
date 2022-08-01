@@ -30,10 +30,14 @@ export default function App() {
   console.log(cards);
   console.log(pickedCards);
 
+  const result = pickedCards.map((pickedCards) => <BusinessCard info={pickedCards} key={pickedCards.phoneNumber} />);
+  // key 는 props로 넘어가지 않음
+
+  console.log(result);
   return (
     <div>
       {cards.length > 0 && <button onClick={draw}>추첨하기</button>}
-      {pickedCards.length > 0 && pickedCards.map((pickedCards) => <BusinessCard info={pickedCards} />)}
+      {pickedCards.length > 0 && result}
       {/* {pickedCards.length > 0 && <BusinessCard info={pickedCards[pickedCards.length - 1]} />} */}
     </div>
   );
