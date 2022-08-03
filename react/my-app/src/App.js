@@ -3,6 +3,7 @@ import FunctionClock from "./components/FunctionClock";
 import UseEffect from "./components/UseEffect";
 import Banner from "./components/Banner";
 import Toggle from "./components/Toggle";
+import SimpleForm from "./components/SimpleForm";
 function App() {
   return (
     <div>
@@ -10,6 +11,7 @@ function App() {
       {/* <UseEffect /> */}
       {/* <Banner /> */}
       <Toggle />
+      <SimpleForm />
     </div>
   );
 }
