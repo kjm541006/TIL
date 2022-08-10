@@ -5,9 +5,9 @@ export default function ProductTable(props) {
   let { products, filter } = props;
   console.log(filter);
 
-  const inStockProducts = products.filter((p) => p.stocked === true);
-  console.log(inStockProducts);
-  products = filter.inStockOnly === true ? inStockProducts : products;
+  // const inStockProducts = products.filter((p) => p.stocked === true);
+  // console.log(inStockProducts);
+  // products = filter.inStockOnly === true ? inStockProducts : products;
 
   const targetProducts = products.filter((p) => p.name.toLowerCase().includes(filter.text.toLowerCase()));
   const filteredProducts = targetProducts.length > 0 ? targetProducts : products;
@@ -39,7 +39,7 @@ export default function ProductTable(props) {
       </thead>
       <tbody>
         {keys.map((key, idx) => (
-          <ProductsTable category={key} items={result[key]} key={idx} />
+          <ProductsTable category={key} items={result[key]} key={idx} filter={filter} />
         ))}
       </tbody>
     </table>
