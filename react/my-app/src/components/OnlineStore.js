@@ -28,7 +28,7 @@ export default function OnlineStore() {
   return (
     <div>
       <SearchBar filter={filter} updateFilter={updateFilter} />
-      <StoreTable products={datas} />
+      <StoreTable filter={filter} products={datas} />
     </div>
   );
 }

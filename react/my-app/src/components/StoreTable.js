@@ -2,9 +2,18 @@ import React from "react";
 import ProductsTable from "./ProductsTable";
 
 export default function ProductTable(props) {
-  const { products } = props;
+  let { products, filter } = props;
+  console.log(filter);
 
-  const result = products.reduce((acc, cur) => {
+  const inStockProducts = products.filter((p) => p.stocked === true);
+  console.log(inStockProducts);
+  products = filter.inStockOnly === true ? inStockProducts : products;
+
+  const targetProducts = products.filter((p) => p.name.toLowerCase().includes(filter.text.toLowerCase()));
+  const filteredProducts = targetProducts.length > 0 ? targetProducts : products;
+  console.log(filteredProducts);
+
+  const result = filteredProducts.reduce((acc, cur) => {
     if (acc.hasOwnProperty(cur.category)) {
       return {
         ...acc,
