@@ -13,7 +13,7 @@ export default function ProductsTable(props) {
       </tr>
       {filteredItems.map((item) => (
         <tr key={item.name}>
-          <td>{item.name}</td>
+          <td style={{ color: item.stocked === true ? "black" : "red" }}>{item.name}</td>
           <td>{item.price}</td>
         </tr>
       ))}
