@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
+import axios from "axios";
 
 export default function ReactPage() {
   // api call
@@ -14,13 +15,14 @@ export default function ReactPage() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-      console.log(res);
-      const result = await res.json();
+      const result = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      // const result = await res.json();
       console.log(result);
-      setDocs(result);
+      console.log(result.data);
+      // setDocs(result);
+      return result.data;
     }
-    fetchData();
+    fetchData().then((res) => setDocs(res));
   }, []);
 
   return (
