@@ -1,11 +1,25 @@
-import React, { createContext } from "react";
+import React, { createContext, useReducer } from "react";
 
 export const UserContext = createContext();
 
+const initialUser = {
+  name: "jumin",
+  job: "FE-developer",
+};
+
+const UserReducer = (state, action) => {
+  switch (action.type) {
+    case "changeJob":
+      return { ...state, job: action.text };
+
+    default:
+      break;
+  }
+};
+
 export default function UserStore(props) {
-  const user = {
-    name: "jumin",
-    job: "FE-developer",
-  };
-  return <UserContext.Provider value={user}>{props.children}</UserContext.Provider>;
+  const [user, dispatch] = useReducer(UserReducer, initialUser);
+  console.log(user);
+
+  return <UserContext.Provider value={dispatch}>{props.children}</UserContext.Provider>;
 }
