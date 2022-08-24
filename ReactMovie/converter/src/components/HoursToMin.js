@@ -17,6 +17,7 @@ export default function HoursToMin() {
 
   return (
     <div>
+      <h2>Hours to Minutes</h2>
       <label htmlFor="hour">
         <span>Hours</span>
         <input
