@@ -3,7 +3,8 @@ import { UserContext } from "../store/user";
 import Navigator from "./Navigator";
 
 export default function BlogPage() {
-  const dispatch = useContext(UserContext);
+  const { dispatch } = useContext(UserContext);
+  console.log(user);
   console.log(dispatch);
   return (
     <div>

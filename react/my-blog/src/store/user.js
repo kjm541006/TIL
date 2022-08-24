@@ -21,5 +21,5 @@ export default function UserStore(props) {
   const [user, dispatch] = useReducer(UserReducer, initialUser);
   console.log(user);
 
-  return <UserContext.Provider value={dispatch}>{props.children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ user, dispatch }}>{props.children}</UserContext.Provider>;
 }
